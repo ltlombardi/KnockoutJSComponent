@@ -1,0 +1,27 @@
+﻿body {
+    font-family: 'Segoe UI', sans-serif;
+}
+
+span {
+    font-style: italic;
+}
+
+ul {
+    margin: 0;
+}
+
+.product {
+    list-style-type: none;
+    background-color: rgba(0,0,0,0.1);
+    padding: 1em;
+    border-radius: 1em;
+    min-height: 3.5em;
+}
+
+    .product + .product {
+        margin-top: 1em;
+    }
+
+button {
+    margin: 0.5em 0;
+}
