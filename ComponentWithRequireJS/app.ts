@@ -1,13 +1,16 @@
-//this example is from http://knockoutjs.com/documentation/component-overview.html
+﻿//this example is from http://knockoutjs.com/documentation/component-overview.html
 //This project is based on the Typescript template addon. Nuget was used to load the frameworks
 //Used node to download typings for the frameworks
-window.onload = function () {
+
+window.onload = () => {
     ko.applyBindings(new MyViewModel());
 };
-function Product(name, rating) {
+
+function Product(name, rating?) {
     this.name = name;
     this.userRating = ko.observable(rating || null);
 }
+
 function MyViewModel() {
     this.products = [
         new Product('Garlic bread'),
@@ -15,9 +18,8 @@ function MyViewModel() {
         new Product('Seagull spaghetti', 'like') // This one was already 'liked'
     ];
 }
-// This is the same component as 'like-widget' but with separated template file and using requireJS as a module loader
-ko.components.register('like-or-dislike', {
+
+ko.components.register('like-widget', {
     viewModel: { require: 'Components/component-like-widget' },
     template: { require: 'text!Components/component-like-widget.html' }
 });
-//# sourceMappingURL=app.js.map

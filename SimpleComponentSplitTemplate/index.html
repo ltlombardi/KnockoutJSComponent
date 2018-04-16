@@ -1,0 +1,28 @@
+﻿<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>Fuck</title>
+    <link rel="stylesheet" href="app.css" type="text/css" />
+    <script src="Scripts/knockout-3.4.2.debug.js"></script>
+    <script src="Scripts/jquery-3.3.1.js"></script>
+    <script>
+        $(function () { $("#includedContent").load("/Components/like-widget-separated.template.html"); });
+    </script>
+    <script src="Components/like-widget-separated.component.js"></script>
+    <script src="app.js"></script>
+</head>
+<body>
+    <h1>KnockoutJS Component Example based on Typescript Template2</h1>
+    <ul data-bind="foreach: products">
+        <li class="product">
+            <strong data-bind="text: name"></strong>
+            <like-widget-separated params="value: userRating"></like-widget-separated>
+        </li>
+    </ul>
+    <div id="includedContent"></div>
+</body>
+</html>
+
+<!--Commentaries and explanations on the app.ts file-->
